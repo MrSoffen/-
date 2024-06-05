@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Електронна медична картка</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Електронна медична картка</h1>
+    <form action="submit_medical_record.php" method="POST">
+        <div class="form-group">
+            <label for="patientName">Повне ім'я пацієнта:</label>
+            <input type="text" id="patientName" name="patientName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="dob">Дата народження:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Стать:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Чоловік</option>
+                <option value="female">Жінка</option>
+                <option value="other">Інше</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="address">Адреса:</label>
+            <input type="text" id="address" name="address" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Телефонний номер:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <div class="form-group">
+            <label for="medicalHistory">Медична історія:</label>
+            <textarea id="medicalHistory" name="medicalHistory" rows="4" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="currentMedication">Поточні ліки:</label>
+            <textarea id="currentMedication" name="currentMedication" rows="4" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="allergies">Алергії:</label>
+            <textarea id="allergies" name="allergies" rows="2" required></textarea>
+        </div>
+
+        <button type="submit">Зберегти інформацію</button>
+    </form>
+</body>
+</html>

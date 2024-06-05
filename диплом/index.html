@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Веб-система проходження лікування</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .container h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .button {
+            display: block;
+            width: 200px;
+            margin: 10px auto;
+            padding: 10px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ласкаво просимо до медичної системи</h1>
+        <a href="medcart.html" class="button">Електронна медична картка</a>
+        <a href="reception.html" class="button">Запис на прийоми</a>
+        <a href="plan.html" class="button">Планування лікування</a>
+        <a href="information.html" class="button">Система сповіщень</a>
+        <a href="submit_patient_summary.html" class="button">Висновки пацієнта</a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

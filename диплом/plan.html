@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Планування</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-container label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #333;
+        }
+
+        .form-container input,
+        .form-container select,
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Запис на прийом</h2>
+        <form action="schedule_appointment.php" method="POST">
+            <label for="patientId">ID пацієнта:</label>
+            <input type="text" id="patientId" name="patientId" required>
+
+            <label for="date">Дата прийому:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Час прийому:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="doctor">Лікар:</label>
+            <select id="doctor" name="doctor">
+                <option value="drSmith">Доктор Сміт</option>
+                <option value="drJones">Доктор Джонс</option>
+            </select>
+
+            <label for="notes">Замітки:</label>
+            <textarea id="notes" name="notes" rows="3"></textarea>
+
+            <button type="submit">Запланувати</button>
+        </form>
+    </div>
+</body>
+</html>

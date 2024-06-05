@@ -1,0 +1,22 @@
+<div id="notifications"></div>
+
+<script>
+function loadNotifications() {
+    fetch('get_notifications.php')
+    .then(response => response.json())
+    .then(data => {
+        const container = document.getElementById('notifications');
+        container.innerHTML = '';
+        data.forEach(notif => {
+            const div = document.createElement('div');
+            div.textContent = notif.message;
+            container.appendChild(div);
+        });
+    })
+    .catch(error => console.error('Error loading notifications:', error));
+}
+
+// Викликати функцію кожні 30 секунд
+setInterval(loadNotifications, 30000);
+loadNotifications();
+</script>

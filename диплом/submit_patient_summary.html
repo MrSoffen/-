@@ -1,0 +1,18 @@
+<form action="submit_patient_summary.php" method="post">
+    <label for="patient_id">ID пацієнта:</label>
+    <input type="text" id="patient_id" name="patient_id" required>
+
+    <label for="visit_date">Дата візиту:</label>
+    <input type="date" id="visit_date" name="visit_date" required>
+
+    <label for="diagnosis">Діагноз:</label>
+    <textarea id="diagnosis" name="diagnosis" required></textarea>
+
+    <label for="treatment">Лікування:</label>
+    <textarea id="treatment" name="treatment" required></textarea>
+
+    <label for="doctor_notes">Примітки лікаря:</label>
+    <textarea id="doctor_notes" name="doctor_notes"></textarea>
+
+    <button type="submit">Зберегти висновок</button>
+</form>
